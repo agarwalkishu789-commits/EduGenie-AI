@@ -20,26 +20,26 @@ The platform also includes gamification features such as XP, Levels, Achievement
 
 ---
 
-# ✨ Key Features
+#  Key Features
 
-## 🎓 AI Learning Features
+##  AI Learning Features
 
-- 💬 Context-aware AI Chat
-- 📄 Intelligent PDF Question Answering
-- 📚 AI Generated Flashcards
-- 📝 Automatic Quiz Generation
-- 📖 Smart PDF Summarization
-- 🔍 Semantic Search using FAISS
-- 🤖 Retrieval-Augmented Generation (RAG)
+-  Context-aware AI Chat
+-  Intelligent PDF Question Answering
+-  AI Generated Flashcards
+-  Automatic Quiz Generation
+-  Smart PDF Summarization
+-  Semantic Search using FAISS
+-  Retrieval-Augmented Generation (RAG)
 
 ---
 
-## 🧠 Personalized Learning
+##  Personalized Learning
 
-- 🧞 Friendly Genie Personality
-- 👨‍🏫 Teacher Mode
-- 🎓 Professor Mode
-- 🧠 Exam Expert Mode
+-  Friendly Genie Personality
+-  Teacher Mode
+-  Professor Mode
+-  Exam Expert Mode
 
 ### Difficulty Levels
 
@@ -56,29 +56,29 @@ The platform also includes gamification features such as XP, Levels, Achievement
 
 ---
 
-## 🎮 Gamification
+##  Gamification
 
-- ⭐ XP System
-- 🏆 Level Progression
-- 🏅 Achievement Badges
-- 🔥 Daily Learning Streak
-- 📈 Progress Dashboard
-
----
-
-## 🎨 Modern User Interface
-
-- 🌙 Dark Mode
-- ☀️ Light Mode
-- 💬 ChatGPT-inspired Chat UI
-- 📊 Beautiful Analytics Cards
-- ✨ Smooth Animations
-- 📱 Responsive Layout
-- 🎯 Clean Sidebar Navigation
+-  XP System
+-  Level Progression
+-  Achievement Badges
+-  Daily Learning Streak
+-  Progress Dashboard
 
 ---
 
-# 🏗️ Architecture
+## Modern User Interface
+
+-  Dark Mode
+-  Light Mode
+-  ChatGPT-inspired Chat UI
+-  Beautiful Analytics Cards
+-  Smooth Animations
+-  Responsive Layout
+-  Clean Sidebar Navigation
+
+---
+
+#  Architecture
 
 ```
                 PDF
@@ -101,7 +101,7 @@ The platform also includes gamification features such as XP, Levels, Achievement
 
 ---
 
-# 🛠 Tech Stack
+#  Tech Stack
 
 | Category | Technology |
 |----------|------------|
@@ -117,7 +117,7 @@ The platform also includes gamification features such as XP, Levels, Achievement
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```text
 Celebal-AI-Study-Assistant-Pro/
@@ -171,7 +171,7 @@ Celebal-AI-Study-Assistant-Pro/
 
 ---
 
-# ⚙️ Installation
+#  Installation
 
 ## 1. Clone Repository
 
@@ -235,7 +235,7 @@ data/raw/study_material.pdf
 
 ---
 
-# 🚀 Running the Application
+#  Running the Application
 
 ```bash
 streamlit run app.py
@@ -248,9 +248,9 @@ http://localhost:8501
 ```
 ---
 
-# 📚 How to Use
+#  How to Use
 
-## 💬 AI Chat
+##  AI Chat
 
 - Ask questions directly from your uploaded study material.
 - Receive context-aware answers powered by RAG.
@@ -259,7 +259,7 @@ http://localhost:8501
 
 ---
 
-## 📝 AI Quiz Generator
+##  AI Quiz Generator
 
 Generate practice quizzes directly from your uploaded PDF.
 
@@ -274,7 +274,7 @@ Features include:
 
 ---
 
-## 📚 Smart Flashcards
+##  Smart Flashcards
 
 Automatically generate flashcards from study material.
 
@@ -286,7 +286,7 @@ Useful for:
 
 ---
 
-## 📄 Smart Summary
+##  Smart Summary
 
 Generate concise summaries of uploaded documents.
 
@@ -299,7 +299,7 @@ The summary highlights:
 
 ---
 
-## 🏆 XP & Level System
+##  XP & Level System
 
 Students earn XP by interacting with EduGenie AI.
 
@@ -315,21 +315,21 @@ Every 100 XP unlocks a new level.
 
 ---
 
-## 🏅 Achievements
+##  Achievements
 
 Unlock learning achievements by completing milestones.
 
 Examples include:
 
-- 🏅 Quiz Master
-- 💬 100 Questions
-- 🔥 7-Day Learning Streak
-- ⭐ Fast Learner
-- 📚 Dedicated Student
+-  Quiz Master
+-  100 Questions
+-  7-Day Learning Streak
+-  Fast Learner
+-  Dedicated Student
 
 ---
 
-## 📈 Learning Progress
+##  Learning Progress
 
 Monitor your learning journey with interactive analytics.
 
@@ -344,16 +344,16 @@ Track:
 
 ---
 
-# 🎯 AI Personalization
+#  AI Personalization
 
 EduGenie AI provides multiple learning styles.
 
 ## AI Personalities
 
-- 🧞 Friendly Genie
-- 👨‍🏫 Teacher
-- 🎓 Professor
-- 🧠 Exam Expert
+-  Friendly Genie
+-  Teacher
+-  Professor
+-  Exam Expert
 
 ---
 
@@ -376,12 +376,12 @@ EduGenie AI provides multiple learning styles.
 
 ## Theme Support
 
-- ☀️ Light Mode
-- 🌙 Dark Mode
+-  Light Mode
+-  Dark Mode
 
 ---
 
-# 🌟 What Makes EduGenie AI Unique?
+#  What Makes EduGenie AI Unique?
 
 Unlike a traditional chatbot, EduGenie AI combines Retrieval-Augmented Generation (RAG) with modern AI technologies to provide accurate and document-grounded responses.
 
@@ -400,7 +400,7 @@ Key highlights:
 
 ---
 
-# 📊 Learning Analytics
+#  Learning Analytics
 
 EduGenie AI allows students to visualize their learning progress.
 
@@ -415,60 +415,60 @@ Analytics include:
 
 ---
 
-# 📸 Screenshots
+#  Screenshots
 
-## 🏠 Dashboard
+##  Dashboard
 
 ![Dashboard](docs/screenshots/01_dashboard.png)
 
 ---
 
-## 💬 AI Chat
+##  AI Chat
 
 ![Chat](docs/screenshots/02_chat.png)
 
 ---
 
-## 📝 Quiz Generator
+##  Quiz Generator
 
 ![Quiz](docs/screenshots/03_quiz.png)
 
 ---
 
-## 📚 Flashcards
+##  Flashcards
 
 ![Flashcards](docs/screenshots/04_flashcards.png)
 
 ---
 
-## 📊 Progress Dashboard
+##  Progress Dashboard
 
 ![Progress](docs/screenshots/05_progress.png)
 
 ---
 
-## 🏅 Achievements
+##  Achievements
 
 ![Achievements](docs/screenshots/06_achievements.png)
 
 ---
 
-# 🚀 Future Enhancements
+#  Future Enhancements
 
 Planned improvements include:
 
-- 🎙️ Voice Interaction (Speech-to-Text & Text-to-Speech)
-- 🌍 Multi-language Support
-- 📄 Multiple PDF Upload Support
-- 📤 Export Notes as PDF
-- 📅 AI Study Planner
-- 🧩 Mind Map Generation
-- 📸 Image-based Question Answering
-- 🎯 Interview Preparation Mode
+-  Voice Interaction (Speech-to-Text & Text-to-Speech)
+-  Multi-language Support
+-  Multiple PDF Upload Support
+-  Export Notes as PDF
+-  AI Study Planner
+-  Mind Map Generation
+-  Image-based Question Answering
+-  Interview Preparation Mode
 
 ---
 
-# 🧠 How RAG Works
+#  How RAG Works
 
 EduGenie AI follows the Retrieval-Augmented Generation workflow:
 
@@ -485,7 +485,7 @@ This ensures responses remain grounded in the uploaded study material.
 
 ---
 
-# 💡 Best Practices
+#  Best Practices
 
 For the best experience:
 
@@ -499,7 +499,7 @@ For the best experience:
 
 ---
 
-# 🐛 Troubleshooting
+#  Troubleshooting
 
 ### API Key Error
 
@@ -537,7 +537,7 @@ Delete the existing FAISS index and upload the PDF again.
 
 ---
 
-# 📄 License
+#  License
 
 This project is licensed under the **MIT License**.
 
@@ -545,7 +545,7 @@ See the [LICENSE](LICENSE) file for more details.
 
 ---
 
-# 🙏 Acknowledgements
+#  Acknowledgements
 
 Special thanks to the following open-source technologies:
 
@@ -559,7 +559,7 @@ Special thanks to the following open-source technologies:
 
 ---
 
-# 👨‍💻 Developer
+#  Developer
 
 **Kishu Agarwal**
 
@@ -571,18 +571,18 @@ Project developed as part of the **Celebal Technologies Internship Program**.
 
 ---
 
-# ⭐ Project Highlights
+#  Project Highlights
 
-- ✅ AI-Powered Learning Assistant
-- ✅ Retrieval-Augmented Generation (RAG)
-- ✅ Context-Aware AI Chat
-- ✅ Semantic Search with FAISS
-- ✅ Interactive Quiz Generation
-- ✅ AI Flashcards
-- ✅ Smart PDF Summarization
-- ✅ Progress Dashboard
-- ✅ Gamification (XP, Levels & Achievements)
-- ✅ Responsive Modern UI
+-  AI-Powered Learning Assistant
+-  Retrieval-Augmented Generation (RAG)
+-  Context-Aware AI Chat
+-  Semantic Search with FAISS
+-  Interactive Quiz Generation
+-  AI Flashcards
+-  Smart PDF Summarization
+-  Progress Dashboard
+-  Gamification (XP, Levels & Achievements)
+-  Responsive Modern UI
 
 ---
 
@@ -594,6 +594,6 @@ Project developed as part of the **Celebal Technologies Internship Program**.
 
 Transform your study experience with intelligent AI assistance.
 
-If you found this project useful, consider giving it a ⭐ on GitHub.
+If you found this project useful, consider giving it a  on GitHub.
 
 </div>
