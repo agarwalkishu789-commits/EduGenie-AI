@@ -10,8 +10,6 @@ from backend.rag import RAGEngine
 
 load_dotenv()
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-
 st.set_page_config(
     page_title="AI Study Assistant",
     page_icon="🎓",
@@ -20,10 +18,6 @@ st.set_page_config(
 
 st.title("🎓 AI Study Assistant")
 st.caption("Ask questions, summarize documents, and generate quizzes using AI.")
-
-if not GOOGLE_API_KEY:
-    st.error("Google API Key not found in .env file.")
-    st.stop()
 
 pdf_path = Path("data/raw/study_material.pdf")
 
@@ -37,11 +31,10 @@ def load_rag():
     loader = PDFLoader()
     chunks = loader.process_pdf(pdf_path)
 
-    vector_db = VectorStore(GOOGLE_API_KEY)
+    vector_db = VectorStore()
     vector_db.create_vector_store(chunks)
 
-    return RAGEngine(GOOGLE_API_KEY)
-
+    return RAGEngine()
 
 rag = load_rag()
 
