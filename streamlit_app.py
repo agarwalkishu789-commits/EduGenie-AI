@@ -28,11 +28,6 @@ if not pdf_path.exists():
 
 @st.cache_resource
 def load_rag():
-    loader = PDFLoader()
-    chunks = loader.process_pdf(pdf_path)
-
-    vector_db = VectorStore()
-    vector_db.create_vector_store(chunks)
 
     return RAGEngine()
 
