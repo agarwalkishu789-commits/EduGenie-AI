@@ -1,0 +1,13 @@
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-text-splitters==0.2.4
+plotly>=5.23.0
+faiss-cpu>=1.8.0.post1
+pypdf>=4.3.1
+python-dotenv>=1.0.1
+openai>=1.40.0
+sentence-transformers>=3.0.1
+streamlit>=1.36.0
+langchain-huggingface>=0.0.3
+numpy>=1.26.4
+pandas>=2.2.2
