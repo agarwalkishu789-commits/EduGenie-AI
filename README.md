@@ -10,7 +10,14 @@
 
 ---
 
-# 📖 Overview
+# Live Demo
+
+**Streamlit App:**  
+https://edugenie-study-assistant.streamlit.app/
+
+---
+
+#  Overview
 
 EduGenie AI transforms traditional learning into an interactive AI-powered experience. Instead of manually searching through lengthy notes or PDFs, students can upload study material and instantly interact with it using natural language.
 
@@ -58,7 +65,7 @@ The platform also includes gamification features such as XP, Levels, Achievement
 
 ##  Gamification
 
--  XP System
+-  XP Reward System
 -  Level Progression
 -  Achievement Badges
 -  Daily Learning Streak
@@ -88,7 +95,7 @@ The platform also includes gamification features such as XP, Levels, Achievement
           Text Chunking
             (LangChain)
                  │
-      HuggingFace Embeddings
+      HuggingFace sentence Embeddings
                  │
         FAISS Vector Database
                  │
@@ -119,7 +126,7 @@ The platform also includes gamification features such as XP, Levels, Achievement
 
 #  Project Structure
 
-```text
+```
 Celebal-AI-Study-Assistant-Pro/
 │
 ├── assets/
@@ -159,7 +166,6 @@ Celebal-AI-Study-Assistant-Pro/
 │       └── 06_achievements.png
 │
 ├── logs/
-├── tests/
 │
 ├── app.py
 ├── streamlit_app.py
@@ -485,32 +491,6 @@ This ensures responses remain grounded in the uploaded study material.
 
 ---
 
-#  Best Practices
-
-For the best experience:
-
-- Upload well-structured PDFs.
-- Ask clear and specific questions.
-- Use quizzes for revision.
-- Review flashcards regularly.
-- Track your learning progress.
-- Maintain your daily learning streak.
-- Experiment with different AI personalities.
-
----
-
-#  Troubleshooting
-
-### API Key Error
-
-Ensure your `.env` file contains:
-
-```env
-OPENROUTER_API_KEY=your_api_key
-```
-
----
-
 ### PDF Not Found
 
 Place your study material inside:
@@ -563,26 +543,11 @@ Special thanks to the following open-source technologies:
 
 **Kishu Agarwal**
 
-PGDM (Business Analytics)
+PGDM (Business Analytics & AI)
 
-AI & Data Analytics Enthusiast
+AI | Data Analytics Enthusiast | Generative AI Enthusiast
 
 Project developed as part of the **Celebal Technologies Internship Program**.
-
----
-
-#  Project Highlights
-
--  AI-Powered Learning Assistant
--  Retrieval-Augmented Generation (RAG)
--  Context-Aware AI Chat
--  Semantic Search with FAISS
--  Interactive Quiz Generation
--  AI Flashcards
--  Smart PDF Summarization
--  Progress Dashboard
--  Gamification (XP, Levels & Achievements)
--  Responsive Modern UI
 
 ---
 
