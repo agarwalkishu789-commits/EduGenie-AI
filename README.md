@@ -1,4 +1,4 @@
-# 🧞 EduGenie AI – Intelligent AI Study Assistant
+# 🧞 EduGenie AI — Intelligent Study Assistant
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.36+-red.svg)](https://streamlit.io)
@@ -6,559 +6,158 @@
 [![FAISS](https://img.shields.io/badge/FAISS-VectorDB-orange.svg)](https://github.com/facebookresearch/faiss)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **EduGenie AI** is an AI-powered learning assistant that helps students interact with study materials through Retrieval-Augmented Generation (RAG). Built with LangChain, FAISS, HuggingFace Embeddings, Streamlit, and OpenRouter API, it delivers accurate, context-aware answers, quizzes, summaries, flashcards, and personalized learning support.
+EduGenie AI is a Streamlit learning assistant that lets students upload a PDF and study it through document-grounded chat, quizzes, flashcards, summaries, and progress tracking. It uses Retrieval-Augmented Generation (RAG) to retrieve relevant material before generating an answer.
 
----
+## Live demo
 
-# Live Demo
+[Open EduGenie AI](https://edugenie-study-assistant.streamlit.app/)
 
-**Streamlit App:**  
-https://edugenie-study-assistant.streamlit.app/
+## What it does
 
----
+- Upload a PDF from the sidebar; the document is processed into a local FAISS vector store.
+- Ask questions about the uploaded study material in the Chat tab.
+- See a clean source citation with the uploaded filename and page number for each chat response.
+- Generate a five-question multiple-choice quiz, submit answers, and review the result.
+- Generate flashcards and a document summary from the uploaded material.
+- Track questions, quizzes, XP, level, streak, average score, achievements, and quiz-score progression during the session.
+- Switch between light and dark themes, choose an assistant persona, and select learning preferences from the sidebar.
 
-#  Overview
+## Current interface
 
-EduGenie AI transforms traditional learning into an interactive AI-powered experience. Instead of manually searching through lengthy notes or PDFs, students can upload study material and instantly interact with it using natural language.
+The app starts with an upload-first screen. Once a PDF is loaded, EduGenie provides dedicated learning tools for document-grounded study.
 
-The application combines Retrieval-Augmented Generation (RAG) with Large Language Models to retrieve relevant information from uploaded documents before generating responses. This approach significantly improves factual accuracy while reducing hallucinations.
+### Dashboard
 
-The platform also includes gamification features such as XP, Levels, Achievements, Learning Progress, Daily Streaks, and AI Personalities to make studying more engaging and enjoyable.
+![EduGenie dashboard](docs/screenshots/01_dashboard.png)
 
----
+### Chat & RAG-based Question Answering
 
-#  Key Features
+![EduGenie Chat](docs/screenshots/02_chat.png)
 
-##  AI Learning Features
+### AI-Generated Quiz
 
--  Context-aware AI Chat
--  Intelligent PDF Question Answering
--  AI Generated Flashcards
--  Automatic Quiz Generation
--  Smart PDF Summarization
--  Semantic Search using FAISS
--  Retrieval-Augmented Generation (RAG)
+![EduGenie Quiz](docs/screenshots/03_quiz.png)
 
----
+### Flashcards
 
-##  Personalized Learning
+![EduGenie Flashcards](docs/screenshots/04_flashcards.png)
 
--  Friendly Genie Personality
--  Teacher Mode
--  Professor Mode
--  Exam Expert Mode
+### Learning Progress
 
-### Difficulty Levels
+![EduGenie Progress](docs/screenshots/05_progress.png)
 
-- Easy
-- Medium
-- Hard
+### Achievements
 
-### Explanation Styles
+![EduGenie Achievements](docs/screenshots/06_achievements.png)
 
-- Beginner
-- Normal
-- College
-- Professional
+Feature-specific screenshots will be refreshed as new captures are taken from this current interface.
 
----
+## How RAG works
 
-##  Gamification
-
--  XP Reward System
--  Level Progression
--  Achievement Badges
--  Daily Learning Streak
--  Progress Dashboard
-
----
-
-## Modern User Interface
-
--  Dark Mode
--  Light Mode
--  ChatGPT-inspired Chat UI
--  Beautiful Analytics Cards
--  Smooth Animations
--  Responsive Layout
--  Clean Sidebar Navigation
-
----
-
-#  Architecture
-
-```
-                PDF
-                 │
-        PDF Loader (PyPDF)
-                 │
-          Text Chunking
-            (LangChain)
-                 │
-      HuggingFace sentence Embeddings
-                 │
-        FAISS Vector Database
-                 │
-        Semantic Retrieval
-                 │
-        OpenRouter API (LLM)
-                 │
-      Context-Aware Response
+```text
+PDF upload
+   ↓
+PyPDF extraction and text chunking
+   ↓
+HuggingFace sentence embeddings
+   ↓
+FAISS vector store
+   ↓
+Semantic retrieval
+   ↓
+OpenRouter LLM response with page-level citation
 ```
 
----
+## Tech stack
 
-#  Tech Stack
-
-| Category | Technology |
-|----------|------------|
-| Frontend | Streamlit |
-| Backend | Python |
-| LLM | OpenRouter API |
-| RAG Framework | LangChain |
+| Area | Technology |
+| --- | --- |
+| User interface | Streamlit |
+| Language | Python |
+| RAG framework | LangChain |
 | Embeddings | HuggingFace Sentence Transformers |
-| Vector Database | FAISS |
-| PDF Processing | PyPDF |
-| Data Analysis | Pandas, NumPy |
-| Visualization | Plotly |
+| Vector store | FAISS |
+| PDF processing | PyPDF |
+| LLM provider | OpenRouter |
 
----
+## Project structure
 
-#  Project Structure
-
-```
-Celebal-AI-Study-Assistant-Pro/
-│
-├── assets/
-│   └── genie.gif
-│
-├── backend/
-│   ├── cache.py
-│   ├── config.py
-│   ├── llm.py
-│   ├── logger.py
-│   ├── pdf_loader.py
-│   ├── prompts.py
-│   ├── rag.py
-│   ├── utils.py
-│   └── vector_store.py
-│
-├── frontend/
-│   ├── chat.py
-│   ├── quiz.py
-│   ├── sidebar.py
-│   ├── styles.py
-│   └── summary.py
-│
-├── data/
-│   ├── raw/
-│   │   └── study_material.pdf
-│   └── processed/
-│       └── faiss_index/
-│
-├── docs/
-│   └── screenshots/
-│       ├── 01_dashboard.png
-│       ├── 02_chat.png
-│       ├── 03_quiz.png
-│       ├── 04_flashcards.png
-│       ├── 05_progress.png
-│       └── 06_achievements.png
-│
-├── logs/
-│
-├── app.py
-├── streamlit_app.py
+```text
+EduGenie-AI/
+├── app.py                 # Main Streamlit application
+├── streamlit_app.py       # Streamlit deployment entry point
+├── backend/               # PDF, vector-store, LLM, and RAG modules
+├── frontend/              # Reusable UI modules and styles
+├── docs/screenshots/      # README interface captures
+├── data/raw/              # Optional sample study material
 ├── requirements.txt
-├── README.md
 ├── .env.example
 └── .gitignore
 ```
 
----
+## Run locally
 
-#  Installation
+1. Clone the repository and open the project folder.
 
-## 1. Clone Repository
+   ```bash
+   git clone https://github.com/agarwalkishu789-commits/EduGenie-AI.git
+   cd EduGenie-AI
+   ```
 
-```bash
-git clone https://github.com/agarwalkishu789-commits/EduGenie-AI.git
+2. Create and activate a virtual environment.
 
-cd EduGenie-AI
-```
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
 
----
+   On Windows:
 
-## 2. Create Virtual Environment
+   ```powershell
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
 
-### Windows
+3. Install dependencies.
 
-```bash
-python -m venv .venv
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-.venv\Scripts\activate
-```
+4. Copy the example environment file and add your own OpenRouter key.
 
-### macOS/Linux
+   ```bash
+   cp .env.example .env
+   ```
 
-```bash
-python3 -m venv .venv
+   ```env
+   OPENROUTER_API_KEY=your_openrouter_api_key_here
+   ```
 
-source .venv/bin/activate
-```
+   Never commit `.env`; it is intentionally ignored by Git.
 
----
+5. Start the app.
 
-## 3. Install Dependencies
+   ```bash
+   streamlit run app.py
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+   Then open `http://localhost:8501` and upload a PDF from the sidebar.
 
----
+## Notes
 
-## 4. Configure Environment Variables
+- Answers are designed to be grounded in the uploaded PDF. If a topic is not found in the document, the assistant should say so.
+- The vector index is rebuilt when a different PDF is uploaded.
+- Session metrics reset when the browser session is refreshed.
 
-Create a `.env` file inside the project root.
+## License
 
-```
-OPENROUTER_API_KEY=your_openrouter_api_key
-```
+This project is licensed under the [MIT License](LICENSE).
 
-You can generate your API Key from:
+## Developer
 
-https://openrouter.ai/
+**Kishu Agarwal**  
+PGDM (Business Analytics & AI)  
+AI · Data Analytics · Generative AI Enthusiast
 
----
-
-## 5. Add Study Material
-
-Place your study PDF inside
-
-```
-data/raw/study_material.pdf
-```
-
----
-
-#  Running the Application
-
-```bash
-streamlit run app.py
-```
-
-The application will start at:
-
-```
-http://localhost:8501
-```
----
-
-#  How to Use
-
-##  AI Chat
-
-- Ask questions directly from your uploaded study material.
-- Receive context-aware answers powered by RAG.
-- Chat history is maintained during your session.
-- Choose different AI personalities for different learning styles.
-
----
-
-##  AI Quiz Generator
-
-Generate practice quizzes directly from your uploaded PDF.
-
-Features include:
-
-- Multiple question generation
-- Difficulty selection
-- Instant answer checking
-- Score calculation
-- Explanation of answers
-- XP rewards
-
----
-
-##  Smart Flashcards
-
-Automatically generate flashcards from study material.
-
-Useful for:
-
-- Quick revision
-- Concept memorization
-- Exam preparation
-
----
-
-##  Smart Summary
-
-Generate concise summaries of uploaded documents.
-
-The summary highlights:
-
-- Key concepts
-- Important definitions
-- Major topics
-- Revision points
-
----
-
-##  XP & Level System
-
-Students earn XP by interacting with EduGenie AI.
-
-### XP Rewards
-
-| Activity | XP |
-|-----------|----|
-| Ask Question | +5 |
-| Complete Quiz | +20 |
-| Perfect Quiz Score | +50 |
-
-Every 100 XP unlocks a new level.
-
----
-
-##  Achievements
-
-Unlock learning achievements by completing milestones.
-
-Examples include:
-
--  Quiz Master
--  100 Questions
--  7-Day Learning Streak
--  Fast Learner
--  Dedicated Student
-
----
-
-##  Learning Progress
-
-Monitor your learning journey with interactive analytics.
-
-Track:
-
-- Questions Asked
-- Quiz Scores
-- Learning Streak
-- XP Earned
-- Current Level
-- Overall Progress
-
----
-
-#  AI Personalization
-
-EduGenie AI provides multiple learning styles.
-
-## AI Personalities
-
--  Friendly Genie
--  Teacher
--  Professor
--  Exam Expert
-
----
-
-## Difficulty Levels
-
-- Easy
-- Medium
-- Hard
-
----
-
-## Explanation Styles
-
-- Beginner
-- Normal
-- College
-- Professional
-
----
-
-## Theme Support
-
--  Light Mode
--  Dark Mode
-
----
-
-#  What Makes EduGenie AI Unique?
-
-Unlike a traditional chatbot, EduGenie AI combines Retrieval-Augmented Generation (RAG) with modern AI technologies to provide accurate and document-grounded responses.
-
-Key highlights:
-
-- Retrieval-Augmented Generation (RAG)
-- FAISS Semantic Search
-- HuggingFace Embeddings
-- Multiple AI Personalities
-- Adaptive Learning
-- Quiz & Flashcard Generation
-- Gamified Learning Experience
-- Progress Tracking Dashboard
-- Responsive Modern UI
-- Modular Architecture
-
----
-
-#  Learning Analytics
-
-EduGenie AI allows students to visualize their learning progress.
-
-Analytics include:
-
-- Learning Progress
-- Quiz Performance
-- Average Score
-- XP Progress
-- Daily Learning Activity
-- Total Questions Asked
-
----
-
-#  Screenshots
-
-##  Dashboard
-
-![Dashboard](docs/screenshots/01_dashboard.png)
-
----
-
-##  AI Chat
-
-![Chat](docs/screenshots/02_chat.png)
-
----
-
-##  Quiz Generator
-
-![Quiz](docs/screenshots/03_quiz.png)
-
----
-
-##  Flashcards
-
-![Flashcards](docs/screenshots/04_flashcards.png)
-
----
-
-##  Progress Dashboard
-
-![Progress](docs/screenshots/05_progress.png)
-
----
-
-##  Achievements
-
-![Achievements](docs/screenshots/06_achievements.png)
-
----
-
-#  Future Enhancements
-
-Planned improvements include:
-
--  Voice Interaction (Speech-to-Text & Text-to-Speech)
--  Multi-language Support
--  Multiple PDF Upload Support
--  Export Notes as PDF
--  AI Study Planner
--  Mind Map Generation
--  Image-based Question Answering
--  Interview Preparation Mode
-
----
-
-#  How RAG Works
-
-EduGenie AI follows the Retrieval-Augmented Generation workflow:
-
-1. Upload PDF
-2. Extract Text
-3. Split into Chunks
-4. Generate Embeddings
-5. Store in FAISS
-6. Retrieve Relevant Chunks
-7. Send Context + Question to OpenRouter API
-8. Generate Accurate Response
-
-This ensures responses remain grounded in the uploaded study material.
-
----
-
-### PDF Not Found
-
-Place your study material inside:
-
-```
-data/raw/study_material.pdf
-```
-
----
-
-### Quiz Not Generating
-
-Possible reasons:
-
-- Invalid API Key
-- Empty PDF
-- Internet Connection Issue
-
----
-
-### Vector Database Error
-
-Delete the existing FAISS index and upload the PDF again.
-
----
-
-#  License
-
-This project is licensed under the **MIT License**.
-
-See the [LICENSE](LICENSE) file for more details.
-
----
-
-#  Acknowledgements
-
-Special thanks to the following open-source technologies:
-
-- Streamlit
-- LangChain
-- FAISS
-- HuggingFace
-- OpenRouter
-- PyPDF
-- Plotly
-
----
-
-#  Developer
-
-**Kishu Agarwal**
-
-PGDM (Business Analytics & AI)
-
-AI | Data Analytics Enthusiast | Generative AI Enthusiast
-
-Project developed as part of the **Celebal Technologies Internship Program**.
-
----
-
-<div align="center">
-
-# 🧞 EduGenie AI
-
-### *Your AI-Powered Learning Companion*
-
-Transform your study experience with intelligent AI assistance.
-
-If you found this project useful, consider giving it a  on GitHub.
-
-</div>
+Developed as part of the Celebal Technologies Internship Program.
